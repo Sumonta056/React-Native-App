@@ -33,3 +33,13 @@ npx tailwindcss init
 ```bash
 npm i --legacy-peer-deps
 ```
+
+#### Connect Backend
+
+```bash
+ipconfig
+```
+
+```bash
+const response = await axios.get("http://192.168.1.107:3000/user");
+```

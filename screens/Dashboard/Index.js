@@ -1,14 +1,23 @@
 import React, { Component } from "react";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
+import {
+  Button,
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  ImageBackground,
+} from "react-native";
 import { Ionicons as Icon } from "@expo/vector-icons";
-import { ScrollView } from "react-native-gesture-handler";
+import {
+  ScrollView,
+  GestureHandlerRootView,
+} from "react-native-gesture-handler";
 import Cards from "../../component/Cards";
 import Buttons from "../../component/Button";
 import unnamedImage from "./assets/unnamed.jpg";
 import avatarImage from "./assets/1.jpeg";
 
-export default class Home extends Component {
+export default class Index extends Component {
   render() {
     return (
       <GestureHandlerRootView style={{ flex: 1 }}>
@@ -36,6 +45,10 @@ export default class Home extends Component {
           <View style={{ marginTop: 0 }}>
             <Buttons name="Add Vehicle Entry" />
             <Buttons name="Add Landfill Entry" />
+            <Button
+              title="Go to User"
+              onPress={() => this.props.navigation.replace("Users")}
+            />
           </View>
           <Text style={styles.textRussia2}>Eco-Sync Statistic</Text>
           <ScrollView
@@ -50,12 +63,7 @@ export default class Home extends Component {
               bg="#31363F"
               number="90"
             />
-            <Cards
-              icon="users"
-              title="Total Users"
-              bg="#424153"
-              number="42"
-            />
+            <Cards icon="users" title="Total Users" bg="#424153" number="42" />
             <Cards
               icon="landmark"
               title="Total Landfills"

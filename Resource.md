@@ -7,6 +7,10 @@
 
 https://www.youtube.com/watch?v=1_WXNvK_tjs
 
+#### React Native Projects Playlists
+
+https://youtube.com/playlist?list=PL6sXCB6Pgqf9RbLaxmiSQQXp-a0_j56xe&si=AebqhXEuii8vn1yF
+
 ### Onboarding Screen React Native - Animated
 
 https://www.youtube.com/watch?v=z5oHeKseh1w&t=40s
