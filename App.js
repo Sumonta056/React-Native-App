@@ -4,6 +4,8 @@ import { TailwindProvider } from "tailwindcss-react-native";
 import Dashboard from "./screens/Dashboard/Index.js";
 import OnboardingScreen from "./screens/Starting-Screen/OnboardingScreen";
 import User from "./screens/UserInFo/User";
+import Login from "./screens/Login/Login";
+import Register from "./screens/Register/Register";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -14,17 +16,27 @@ export default function App() {
           <Stack.Screen
             options={{ headerShown: false }}
             name="Home"
-            component={OnboardingScreen}
+            component={Login}
           />
           <Stack.Screen
             options={{ headerShown: false }}
             name="OnboardingScreen"
+            component={OnboardingScreen}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Dashboard"
             component={Dashboard}
           />
           <Stack.Screen
             options={{ headerShown: false }}
             name="Users"
             component={User}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Register"
+            component={Register}
           />
         </Stack.Navigator>
       </NavigationContainer>
