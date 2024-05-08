@@ -1,20 +1,26 @@
 import React from "react";
 import { Text, View, Image, TextInput } from "react-native";
 import Icon from "@expo/vector-icons/AntDesign";
-//class based
 
 export default class Register extends React.Component {
   render() {
+    const { navigate } = this.props.navigation;
     return (
-      <View style={{ backgroundColor: "#FFF", height: "100%" }}>
+      <View
+        style={{
+          backgroundColor: "#FFF",
+          height: "100%",
+          justifyContent: "center",
+        }}
+      >
         <Image
           source={require("../Login/image.jpg")}
-          style={{ width: "100%", height: "43%" }}
+          style={{ width: "100%", height: "30%" }}
         />
+
         <Text
           style={{
             fontSize: 30,
-            fontFamily: "SemiBold",
             alignSelf: "center",
           }}
         >
@@ -23,7 +29,6 @@ export default class Register extends React.Component {
 
         <Text
           style={{
-            fontFamily: "SemiBold",
             marginHorizontal: 55,
             textAlign: "center",
             marginTop: 5,
@@ -40,18 +45,15 @@ export default class Register extends React.Component {
             alignItems: "center",
             marginHorizontal: 55,
             borderWidth: 2,
-            marginTop: 50,
+            marginTop: 20,
             paddingHorizontal: 10,
             borderColor: "#00716F",
-            borderRadius: 23,
-            paddingVertical: 2,
+            borderRadius: 4,
+            paddingVertical: 10,
           }}
         >
-          <TextInput
-            placeholder="Email"
-            placeholderTextColor="#00716F"
-            style={{ paddingHorizontal: 10 }}
-          />
+          <Icon name="mail" color="#00716F" size={24} />
+          <TextInput placeholder="Email" style={{ paddingHorizontal: 10 }} />
         </View>
         <View
           style={{
@@ -62,14 +64,14 @@ export default class Register extends React.Component {
             marginTop: 15,
             paddingHorizontal: 10,
             borderColor: "#00716F",
-            borderRadius: 23,
-            paddingVertical: 2,
+            borderRadius: 4,
+            paddingVertical: 10,
           }}
         >
+          <Icon name="lock" color="#00716F" size={24} />
           <TextInput
-            secureTextEntry
             placeholder="Password"
-            placeholderTextColor="#00716F"
+            secureTextEntry={true}
             style={{ paddingHorizontal: 10 }}
           />
         </View>
@@ -82,14 +84,14 @@ export default class Register extends React.Component {
             marginTop: 15,
             paddingHorizontal: 10,
             borderColor: "#00716F",
-            borderRadius: 23,
-            paddingVertical: 2,
+            borderRadius: 4,
+            paddingVertical: 10,
           }}
         >
+          <Icon name="lock" color="#00716F" size={24} />
           <TextInput
-            secureTextEntry
             placeholder="Confirm Password"
-            placeholderTextColor="#00716F"
+            secureTextEntry={true}
             style={{ paddingHorizontal: 10 }}
           />
         </View>
@@ -99,21 +101,31 @@ export default class Register extends React.Component {
             marginHorizontal: 55,
             alignItems: "center",
             justifyContent: "center",
-            marginTop: 30,
+            marginTop: 20,
             backgroundColor: "#00716F",
             paddingVertical: 10,
-            borderRadius: 23,
+            borderRadius: 4,
           }}
         >
           <Text
             style={{
               color: "white",
-              fontFamily: "SemiBold",
+              fontSize: 18,
             }}
           >
             Register
           </Text>
         </View>
+        <Text
+          onPress={() => navigate("Home")}
+          style={{
+            alignSelf: "center",
+            color: "#00716F",
+            paddingVertical: 20,
+          }}
+        >
+          "Already have an account? Login here."
+        </Text>
       </View>
     );
   }

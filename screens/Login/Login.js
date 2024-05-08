@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, Image, TextInput } from "react-native";
+import { TouchableOpacity } from "react-native";
 import Icon from "@expo/vector-icons/AntDesign";
 
 export default class Login extends React.Component {
@@ -67,7 +68,7 @@ export default class Login extends React.Component {
             paddingVertical: 10,
           }}
         >
-          <Icon name="lock" color="#00716F" size={24} />
+          <Icon name="unlock" color="#00716F" size={24} />
           <TextInput
             placeholder="Password"
             secureTextEntry={true}
@@ -75,19 +76,19 @@ export default class Login extends React.Component {
           />
         </View>
 
-        <View
+        <TouchableOpacity
+          onPress={() => navigate("OnboardingScreen")}
           style={{
-            marginHorizontal: 55,
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: 20,
             backgroundColor: "#00716F",
             paddingVertical: 10,
             borderRadius: 4,
+            alignItems: "center",
+            justifyContent: "center",
+            marginHorizontal: 55,
+            marginTop: 20,
           }}
         >
           <Text
-            onPress={() => navigate("OnboardingScreen")}
             style={{
               color: "white",
               fontSize: 18,
@@ -95,7 +96,7 @@ export default class Login extends React.Component {
           >
             Login
           </Text>
-        </View>
+        </TouchableOpacity>
         <Text
           onPress={() => navigate("Register")}
           style={{
