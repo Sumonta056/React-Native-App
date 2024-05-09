@@ -45,7 +45,7 @@ const Index = ({ navigation }) => {
         <ImageBackground source={unnamedImage} style={styles.map}>
           <View style={styles.col}>
             <View style={{ width: "50%" }}>
-              <Icon name="menu" color="#FFF" size={26} />
+              <Icon name="" color="#FFF" size={26} />
             </View>
             <View style={styles.avatarContainer}>
               <Image source={avatarImage} style={styles.avatar} />
@@ -96,7 +96,7 @@ const Index = ({ navigation }) => {
             onPress={() => this.props.navigation.navigate("Landfill")}
           />
           <TouchableOpacity
-            onPress={() => this.props.navigation.replace("Users")}
+            onPress={() => navigation.navigate("Users")}
             style={{
               alignItems: "center",
               paddingHorizontal: 20,
